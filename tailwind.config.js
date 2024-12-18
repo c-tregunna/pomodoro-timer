@@ -6,14 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'outfit': ['Outfit', 'sans-serif'],
+        'count': ['Count', 'sans-serif'],
         },
-      backgroundImage: {
-        bg_hero_one: 'url("assets/recipe-hero-images.png")'
-      },
-      colors: {
-        'slate-rgba': 'rgba(226, 232, 240, .70)',
-      }
        },
     plugins: [
       require('flowbite/plugin')
