@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="output.css">
     <title>Document</title>
 </head>
-<body class="bg-slate-300 h-screen w-screen flex items-center flex-col text-center">
-    <header>
-        <h1 class="text-[tomato] text-4xl text-center mt-10">🍅Tomato Timer🍅</h1>
-        <p class="text-center text-sm p-4">The Tomato Timer is based of the Pomodoro Technique to aid you in being productive and awesome</p>
-        <p class="text-center text-sm p-4">Set you focus time and break time and go forth in to your day</p>
-    </header>
-    <main class="w-screen h-full flex justify-center mt-10">
-        <div class="conatiner p-10 w-11/12 max-w-[500px] h-56 border border-slate-500 rounded-lg flex flex-col">
-            <div class="font-count text-6xl">11:00</div>
-        </div>
-    </main>
-    
+<body class="bg-black h-screen w-screen flex items-center flex-col text-center font-press-start text-retro-green">
+    <div class="absolute top-0 left-0 h-screen w-screen overflow-hidden z-10 bg-black text-retro-green text-center transition-all duration-1000 border-b-8 border-retro-drk-green" id="intro-modal">
+        <button id="close-btn" class="absolute top-10 right-10 cursor-pointer bg-retro-drk-green text-retro-green px-4 py-2 text-2xl">X</button>
+        <h2 class="animate-pulse text-3xl w-1/2 m-auto mt-20">Greetings Professor Falken - Shall we play a game?</h2>
+        <p class="text-2xl w-1/2 m-auto mt-20 tracking-wider">What is this all about?</p>
+        <p class="text-2l w-1/2 m-auto mt-8 tracking-wider">Think of this timer as your productivity buddy to help you get through the 80s. It chops your work into bite-sized, 25-minute focus sessions with little breaks in between to keep your brain fresh. After a few rounds, you get a longer break—kind of like leveling up in an arcade game. It’s simple, effective, and totally retro cool.</p>
+    </div>
+    <h1>HELLO</h1>
+    <script src="app.js"></script>
 </body>
 </html>
