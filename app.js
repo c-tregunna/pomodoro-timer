@@ -8,6 +8,8 @@ let timerInterval; // Store the setInterval ID
 let isTimerRunning = false; // Track the timer state
 const startPauseBtn = document.getElementById('start-pause-btn'); // Start/Pause button
 const alienImage = document.getElementById('alien')
+const alienContainer = document.getElementById('alien-holder')
+const titleCursor = document.getElementById('title-cursor')
 
 // Function to hide the overlay when clicking the close button
 function hideOverlay() {
@@ -21,7 +23,8 @@ function hideOverlay() {
 // Function to show a loading spinner after overlay closes, then display the timer
 function hideLoadingSpinner() {
     setTimeout(() => {
-        loadingSpinner.style.visibility = "hidden";
+        loadingSpinner.remove()
+
     }, 2000);
     setTimeout(() => {
         document.getElementById("time").style.visibility = "visible";
@@ -33,7 +36,7 @@ function updateTimer() {
     const minutes = Math.floor(focusStartMinutesTotal / 60);
     let seconds = focusStartMinutesTotal % 60;
 
-    // Format seconds to always show two digits
+    // Format seconds to always show two digits - ? of true to this, : is false do this
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     // Update the timer display
@@ -45,7 +48,7 @@ function updateTimer() {
     } else {
         // When the timer reaches 0, stop the timer
         clearInterval(timerInterval);
-        startPauseBtn.textContent = "Start"; // Reset button to "Start"
+        startPauseBtn.textContent = "Start Game"; // Reset button to "Start"
         isTimerRunning = false;
     }
 }
@@ -53,21 +56,28 @@ function updateTimer() {
 // Start/Pause button click event handler
 startPauseBtn.addEventListener('click', function() {
     if (isTimerRunning) {
-        // If the timer is running, pause it
+        // Pause
         clearInterval(timerInterval);
-        startPauseBtn.textContent = "Resume"; // Change button to "Resume"
-        alienImage.classList.remove('animate-moveAlien')
-
+        startPauseBtn.textContent = "Resume Game";
+        alienImage.classList.remove('animate-moveAlien');
+        alienImage.style.left = ''; // Reset left property
+        alienImage.classList.add('animate-bounce');
+        alienImage.classList.remove('absolute')
+        titleCursor.style.visibility = 'visible'
     } else {
-        // If the timer is paused, start/resume it
+        // Resume
         timerInterval = setInterval(updateTimer, 1000);
-        startPauseBtn.textContent = "Pause"; // Change button to "Pause"
-        alienImage.classList.add('animate-moveAlien')
+        startPauseBtn.textContent = "Pause Game";
+        alienImage.classList.remove('animate-bounce');
+        alienImage.classList.add('animate-moveAlien');
+        alienImage.classList.add('absolute')
+        titleCursor.style.visibility = 'hidden'
     }
 
-    // Toggle the timer state
     isTimerRunning = !isTimerRunning;
 });
+
+
 
 // Close button event listener
 closeBtn.addEventListener('click', function() {
@@ -78,8 +88,6 @@ closeBtn.addEventListener('click', function() {
     // Start the countdown timer after the spinner hides
     setTimeout(() => {
         // Initially set the button to "Start" when page loads
-        startPauseBtn.textContent = "Start";
+        startPauseBtn.textContent = "Start Game";
     }, 2200);
-
-    console.log('clicked');
 });

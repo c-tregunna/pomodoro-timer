@@ -23,10 +23,19 @@ module.exports = {
           "100%": {
             left: "100%"
           }
+        },
+        blink: {
+          "0%": {
+            color: "black"
+          },
+          "100%": {
+            color: "#22C55E"
+          }
         }
       },
       animation: {
-        moveAlien: "moveAlienHorizontal 5s steps(16) infinite alternate"
+        moveAlien: "moveAlienHorizontal 5s steps(8) infinite alternate",
+        cursorBlink: "blink .8s ease-in-out infinite"
       }
      },
     plugins: [
