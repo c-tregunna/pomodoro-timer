@@ -7,6 +7,7 @@ const focusTimer = document.getElementById('timer');
 let timerInterval; // Store the setInterval ID
 let isTimerRunning = false; // Track the timer state
 const startPauseBtn = document.getElementById('start-pause-btn'); // Start/Pause button
+const alienImage = document.getElementById('alien')
 
 // Function to hide the overlay when clicking the close button
 function hideOverlay() {
@@ -55,10 +56,13 @@ startPauseBtn.addEventListener('click', function() {
         // If the timer is running, pause it
         clearInterval(timerInterval);
         startPauseBtn.textContent = "Resume"; // Change button to "Resume"
+        alienImage.classList.remove('animate-moveAlien')
+
     } else {
         // If the timer is paused, start/resume it
         timerInterval = setInterval(updateTimer, 1000);
         startPauseBtn.textContent = "Pause"; // Change button to "Pause"
+        alienImage.classList.add('animate-moveAlien')
     }
 
     // Toggle the timer state
