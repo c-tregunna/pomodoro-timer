@@ -30,7 +30,8 @@ function hideLoadingSpinner() {
         document.getElementById("time").style.visibility = "visible";
         alienImage.style.width = "90px"
         alienImage.style.height = "90px"
-        alienImage.classList.add('mt-8')
+        document.getElementById('loading-text').style.display = "none"
+        document.getElementById('alien-container').style.height = "120px"
     }, 6200);
 }
 
