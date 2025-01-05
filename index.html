@@ -28,14 +28,15 @@
         <!-- Animated Alien -->
         <div class="w-screen md:w-1/2 md:m-auto flex justify-center items-center flex-col relative" id="alien-container">
             <img src="assets/8-bit-alien-v2.svg"  id="alien" class="h-[200px] w-[200px] mt-24 animate-bounce">
-            <p id="loading-text" class="uppercase text-2xl">Loading <span id="title-cursor" class="animate-cursorBlink">_</span></p>
+            <p id="loading-text" class="uppercase text-2xl">Loading<span id="title-cursor" class="animate-cursorBlink">_</span></p>
         </div>
         <div class="invisible mt-20" id="time">
             <h2 id="timer" class="text-3xl md:text-6xl md:m-auto">25:00</h2>
-            <div class="flex w-screen md:w-1/2 md:mx-auto px-2 py-4 mt-10 justify-between">
-                <button id="short-break-btn" class="buttons">Short Break</button>
-                <button id="start-pause-btn" class="buttons">Start Game</button>
-                <button id="long-break-btn" class="buttons">Long Break</button>
+            <div class="flex w-screen md:w-3/4 md:mx-auto max-w-[800px] px-2 py-4 mt-10 justify-between flex-col-reverse gap-4 md:flex-row md:flex-wrap">
+                <button id="short-break-btn" class="buttons md:basis-[30%]">Short Break</button>
+                <button id="focus-btn" class="buttons md:basis-[30%]">Focus Time</button>
+                <button id="long-break-btn" class="buttons md:basis-[30%]">Long Break</button>
+                <button id="start-pause-btn" class="buttons md:w-full">Start Game</button>
             </div>
         </div>
     </div>

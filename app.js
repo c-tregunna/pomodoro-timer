@@ -22,10 +22,7 @@ function hideOverlay() {
 
 // Function to show a loading spinner after overlay closes, then display the timer
 function hideLoadingSpinner() {
-    // setTimeout(() => {
-    //     loadingSpinner.remove()
 
-    // }, 2000);
     setTimeout(() => {
         document.getElementById("time").style.visibility = "visible";
         alienImage.style.width = "90px"
@@ -86,7 +83,6 @@ startPauseBtn.addEventListener('click', function() {
 // Close button event listener
 closeBtn.addEventListener('click', function() {
     hideOverlay();
-    // loadingSpinner.style.visibility = "visible";
     hideLoadingSpinner();
 
     // Start the countdown timer after the spinner hides
