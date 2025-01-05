@@ -11,7 +11,9 @@ module.exports = {
         },
       colors: {
         'retro-green': "#22C55E",
-        'retro-drk-green': "#16803C"
+        'retro-drk-green': "#16803C",
+        "gross-pink": "#FD6EFC",
+        "gross-yellow": "#FFEB24"
       },
       keyframes: {
         moveAlienHorizontal: {
