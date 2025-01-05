@@ -2,7 +2,18 @@ const closeBtn = document.getElementById('close-btn');
 const introModal = document.getElementById('intro-modal');
 const alienImage = document.getElementById('alien')
 const alienContainer = document.getElementById('alien-holder')
-
+const checkbox = document.getElementById('check')
+function isCheckboxChecked(event) {
+    if (checkbox.checked) {
+        event.preventDefault()
+        document.documentElement.classList.add('dark')
+        console.log("checked")
+    } else {
+        console.log("not checked")
+        document.documentElement.classList.remove('dark')
+    }
+}
+checkbox.addEventListener('change', isCheckboxChecked)
 // variables for timers
 let focusStartMinutes = 25;
 let focusStartMinutesTotal = focusStartMinutes * 60
