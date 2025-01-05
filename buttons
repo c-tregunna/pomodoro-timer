@@ -1,0 +1,19 @@
+function timerAmount(e) {
+    if(e.target.textContent === "Short Break") {
+        timer.textContent = "5:00"
+        focusStartMinutes = 5
+    } 
+    if(e.target.textContent === "Long Break") {
+        timer.textContent = "15:00"
+        focusStartMinutes = 15
+    } 
+    if(e.target.textContent === "Focus Tine") {
+        timer.textContent = "25:00"
+        focusStartMinutes = 25
+    } 
+}
+
+const shortBreakButton = document.getElementById('short-break-btn');
+const longBreakButton = document.getElementById('long-break-btn');
+shortBreakButton.addEventListener('click', timerAmount);
+longBreakButton.addEventListener('click', timerAmount);
