@@ -23,8 +23,13 @@
     <!-- End Starting overlay -->
 
     <!-- Pomobit App -->
-    <div class="w-screen h-screen pt-20 ">    
-        <h1 class="text-xl md:text-4xl tracking-widest uppercase">Ready Player 1</h1>
+    <div class="w-screen h-screen"> 
+        <label for="check" class="bg-retro-drk-green w-20 h-10 relative cursor-pointer ml-0 flex justify-self-end mt-4 mr-4">
+            <i class="fa-solid fa-moon w-8 text-black"></i>
+            <input type="checkbox" id="check" class="sr-only peer">
+            <span class="w-2/5 h-4/5 bg-retro-green absolute left-1 top-1 peer-checked:bg-rose-600 peer-checked:left-11 transition-all duration-500"></span>
+        </label>   
+        <h1 class="text-xl md:text-4xl tracking-widest uppercase mt-20">Ready Player 1</h1>
         <!-- Animated Alien -->
         <div class="w-screen md:w-1/2 md:m-auto flex justify-center items-center flex-col relative" id="alien-container">
             <img src="assets/8-bit-alien-v2.svg"  id="alien" class="h-[200px] w-[200px] mt-24 animate-bounce">
@@ -38,6 +43,7 @@
                 <button id="long-break-btn" class="buttons md:basis-[30%]">Long Break</button>
                 <button id="start-pause-btn" class="buttons md:w-full">Start Game</button>
             </div>
+
         </div>
     </div>
     

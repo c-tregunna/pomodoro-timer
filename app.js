@@ -39,11 +39,11 @@ function timerAmount(e) {
     if (isTimerRunning) {
         clearInterval(timerInterval);
         isTimerRunning = false;
-        startPauseBtn.textContent = "Start Game"; // Reset button to "Start"
-        alienImage.classList.remove('animate-moveAlien');
-        alienImage.style.left = ''; // Reset left property
-        alienImage.classList.add('animate-bounce');
-        alienImage.classList.remove('absolute');
+        startPauseBtn.textContent = "Start Game" // Reset button to "Start"
+        alienImage.classList.remove('animate-moveAlien')
+        alienImage.style.left = '' // Reset left property
+        alienImage.classList.add('animate-bounce')
+        alienImage.classList.remove('absolute')
     }
     if(e.target.textContent === "Short Break") {
         timer.textContent = "5:00"
@@ -108,32 +108,6 @@ function startTimer() {
 }
 
 startPauseBtn.addEventListener('click', startTimer);
-
-// Start/Pause button click event handler
-// startPauseBtn.addEventListener('click', function() {
-//     if (isTimerRunning) {
-//         // Pause
-//         clearInterval(timerInterval);
-//         startPauseBtn.textContent = "Resume Game";
-//         alienImage.classList.remove('animate-moveAlien');
-//         alienImage.style.left = ''; // Reset left property
-//         alienImage.classList.add('animate-bounce');
-//         alienImage.classList.remove('absolute')
-//         titleCursor.style.visibility = 'visible'
-//     } else {
-//         // Resume
-//         timerInterval = setInterval(updateTimer, 1000);
-//         startPauseBtn.textContent = "Pause Game";
-//         alienImage.classList.remove('animate-bounce');
-//         alienImage.classList.add('animate-moveAlien');
-//         alienImage.classList.add('absolute')
-//         titleCursor.style.visibility = 'hidden'
-//     }
-
-//     isTimerRunning = !isTimerRunning;
-// });
-
-
 
 // Close button event listener
 closeBtn.addEventListener('click', function() {
