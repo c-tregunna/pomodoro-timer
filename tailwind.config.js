@@ -34,11 +34,20 @@ module.exports = {
           "100%": {
             color: "#22C55E"
           }
+        },
+        blinkDark: {
+          "0%": {
+            color: "white"
+          },
+          "100%": {
+            color: "#FD6EFC"
+          }
         }
       },
       animation: {
         moveAlien: "moveAlienHorizontal 5s steps(8) infinite alternate",
-        cursorBlink: "blink .8s ease-in-out infinite"
+        cursorBlink: "blink .8s ease-in-out infinite",
+        cursorBlinkDark: "blinkDark .8s ease-in-out infinite"
       }
      },
     plugins: [

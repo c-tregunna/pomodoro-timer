@@ -3,6 +3,7 @@ const introModal = document.getElementById('intro-modal');
 const alienImage = document.getElementById('alien')
 const alienContainer = document.getElementById('alien-holder')
 const checkbox = document.getElementById('check')
+const homeCheckbox = document.getElementById('home-check')
 function isCheckboxChecked(event) {
     if (checkbox.checked) {
         event.preventDefault()
